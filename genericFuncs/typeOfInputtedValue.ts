@@ -1,7 +1,7 @@
 
-const inputValue1 = 45;
-const inputValue2  = "Text";
-const inputValue3 = {
+const inputValue1: number = 45;
+const inputValue2: string  = "Text";
+const inputValue3 : {name: string; age: number} = {
     name: "John",
     age: 23
 }

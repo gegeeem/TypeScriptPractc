@@ -3,9 +3,9 @@ function whatTypeIsVal <T>(val: T): T {
     return val;
 }
 
-const num = 3.14;
-const txt  = "Friday"
-const vehicle = {
+const num: number = 3.14;
+const txt: string  = "Friday"
+const vehicle: {name: string; numberOfSits: number} = {
     name: "fiat",
     numberOfSits: 4,
 }
