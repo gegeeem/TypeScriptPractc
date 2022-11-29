@@ -2,7 +2,7 @@ function whatTypeIsVal <T>(val: T): T {
     
     return val;
 }
-
+let d: Object = {}
 const num: number = 3.14;
 const txt: string  = "Friday"
 const vehicle: {name: string; numberOfSits: number} = {
