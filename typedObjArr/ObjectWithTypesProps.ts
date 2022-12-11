@@ -35,3 +35,16 @@ type BlogPost = { title: string; tags: string[] | undefined };
 const blogBost1: BlogPost = { title: "first post", tags: undefined };
 
 console.log("blogBost1->", blogBost1);
+
+type WithName = { name: string };
+type WithAge = { age: number };
+type WithRole = { role: "admin" | "standard" };
+
+type User23 = WithName & WithAge & WithRole;
+type User52 = WithName | WithAge | WithRole;
+
+const person: User23 = { name: "Joe", age: 45, role: "admin" };
+const someone: User52 = { role: "standard", age: 45, name: "Patrick" };
+
+console.log("type User23 = WithName & WithAge & WithRole->person->", person);
+console.log("type User23 = WithName | WithAge | WithRole->someone->", someone);
