@@ -26,5 +26,12 @@ console.log("valueOfUser->", valueOfUser);
 type ValueOf<Obj> = Obj[keyof Obj];
 type UserValuesFromGeneric = ValueOf<User>;
 
-const student: UserValuesFromGeneric = 'standard';
-console.log('student->', student);
+const student: UserValuesFromGeneric = "standard";
+console.log("student->", student);
+//
+// T | undefined scenario must included undefined
+
+type BlogPost = { title: string; tags: string[] | undefined };
+const blogBost1: BlogPost = { title: "first post", tags: undefined };
+
+console.log("blogBost1->", blogBost1);
