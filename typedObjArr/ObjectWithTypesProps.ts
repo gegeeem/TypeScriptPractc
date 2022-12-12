@@ -53,3 +53,20 @@ type Moj = string;
 type Njegov = number;
 type Nas = Moj & Njegov;
 // const a: Nas = 'da'; //error , a must be 'never'
+
+//Records
+
+type recordOfBooleans = { [key: string]: boolean };
+const noYes: recordOfBooleans = {
+  vehicle: true,
+  forLongDrive: false,
+};
+
+//generic type of Records
+
+type recordOfGeneric = Record<string, number>;
+
+const primes: recordOfGeneric = {
+  two: 2,
+  four: 4,
+};
