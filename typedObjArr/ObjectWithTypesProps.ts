@@ -48,3 +48,8 @@ const someone: User52 = { role: "standard", age: 45, name: "Patrick" };
 
 console.log("type User23 = WithName & WithAge & WithRole->person->", person);
 console.log("type User23 = WithName | WithAge | WithRole->someone->", someone);
+
+type Moj = string;
+type Njegov = number;
+type Nas = Moj & Njegov;
+// const a: Nas = 'da'; //error , a must be 'never'
