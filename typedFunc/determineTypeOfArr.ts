@@ -17,3 +17,5 @@ function determineTypeOfArr<A>(arr: A): boolean | string | undefined {
 console.log(determineTypeOfArr(arrOfStr));
 
 console.log(determineTypeOfArr(19));
+
+console.log(determineTypeOfArr([1, 8, 5, 7]));

@@ -70,3 +70,19 @@ const primes: recordOfGeneric = {
   two: 2,
   four: 4,
 };
+
+type InputState = Record<"valid" | "edited" | "focused", boolean>;
+
+const userInput: InputState = { edited: true, valid: false, focused: false };
+
+type InputState1 = Record<"valid" & "edited" & "focused", boolean>;
+
+const userInput1: InputState1 = { edited: true };
+
+//conditional type
+
+type If<A extends boolean, B, C> = A extends true ? B : C;
+type a = If<true, number, string>; // number
+type b = If<false, {}, []>;
+
+type hybrid = If<true, User23["name"], WithAge["age"]>;
