@@ -3,7 +3,7 @@ interface ItemF {
   taskName: string;
   done: boolean;
 }
-export function arrayMap1() {
+export function arrayMap1(): void {
   const todos1: ItemF[] = [
     {
       id: 1,
@@ -23,5 +23,16 @@ export function arrayMap1() {
   ];
   const newArr1: string[] = todos1.map((el): string => el["taskName"]);
   console.log(newArr1);
+  const newArr2: ItemF[] = todos1.filter((el): ItemF | undefined => {
+    if (el.done === true) {
+      return el;
+    }
+  });
+  console.log(newArr2);
+
+  const newArr3 = todos1.reduce<string>((acc, curr): string => {
+    return acc + " " + curr.taskName;
+  }, "");
+  console.log("reduce", newArr3);
 }
 arrayMap1();
