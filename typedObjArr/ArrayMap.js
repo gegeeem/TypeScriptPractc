@@ -31,6 +31,12 @@ function arrayMap1() {
         return acc + " " + curr.taskName;
     }, "");
     console.log("reduce", newArr3);
+    var getActiveItems = todos1.filter(function (item) {
+        if (item.done === true) {
+            return item;
+        }
+    });
+    console.log("getActiveItems", getActiveItems);
 }
 exports.arrayMap1 = arrayMap1;
 arrayMap1();

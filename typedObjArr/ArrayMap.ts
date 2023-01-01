@@ -34,5 +34,14 @@ export function arrayMap1(): void {
     return acc + " " + curr.taskName;
   }, "");
   console.log("reduce", newArr3);
+  const getActiveItems = todos1.filter(function (
+    item: ItemF
+  ): ItemF | undefined {
+    if (item.done === true) {
+      return item;
+    }
+  });
+  console.log("getActiveItems", getActiveItems);
 }
+
 arrayMap1();
