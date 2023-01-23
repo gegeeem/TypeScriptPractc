@@ -1,4 +1,4 @@
-import { Promise } from "es6-promise";
+
 const myPaymentPromise = new Promise<Record<string, number | string>>(
   (resolve, reject) => {
     // a resolved promise with  an object of 1000 Euro payment
